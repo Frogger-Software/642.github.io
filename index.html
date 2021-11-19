@@ -7,13 +7,13 @@
     <title>CSC 642 848 Fall 2021 Individual Assignment Lei
 
         Data Survey Form
-    </title>
+    </title> 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
         function onSubmit(token) {
-          document.getElementById("demo-form").submit();
+            document.getElementById("form").submit();
         }
-      </script>
+    </script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             Data Survey Form
         </h1>
     </header>
-    <form action="" method="get">
+    <form action="" method="get" id="form">
         <div>
             <label for="last-name">last name</label>
             <input type="text" required>
@@ -97,10 +97,8 @@
             <label class="form-label" for="typeEmail">Email</label>
         </div>
         <input type="checkbox" required>I agree to <a href="https://www.google.com">terms</a>
-        <button class="g-recaptcha" 
-        data-sitekey="6Lfbs0YdAAAAAFRhvQuw_WQlqjX2QaBokl0CH5jP" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+        <button class="g-recaptcha" data-sitekey="6Lfbs0YdAAAAAFRhvQuw_WQlqjX2QaBokl0CH5jP" data-callback='onSubmit'
+            data-action='submit'>Submit</button>
     </form>
 </body>
 
