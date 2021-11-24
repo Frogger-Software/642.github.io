@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
-    <script async defer>
+    <script type="text/javascript" async defer>
         function validateForm() {
             sessionStorage.lastName = document.getElementById("last");
             sessionStorage.firstName = document.getElementById("first");
@@ -81,7 +81,6 @@
             <label class="form-label" for="typeEmail">Email</label>
         </div>`;
         }
-        return false;
     </script>
 </head>
 
@@ -93,7 +92,7 @@
             Data Survey Form
         </h1>
     </header>
-    <form action="?" id="form" onsubmit="return validateForm(); return false">
+    <form action="?" id="form" onsubmit="validateForm(); return false">
         <div class="row form-group">
             <div class="col">
                 <label class="form-label" for="last-name">last name</label>
