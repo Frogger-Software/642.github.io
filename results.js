@@ -7,12 +7,10 @@ var innerhtml = `<header>
 <label for="last-name">last name</label>
 <span id="result-last"></span>
 <script>
-    document.getElementById("result-last").innerHTML = localStorage.lastName;
 </script>
 <label for="first-name">first name</label>
 <span id="result-first"></span>
 <script>
-    document.getElementById("result-first").innerHTML = localStorage.firstName;
 </script>
 </div>
 <div class="dropdown">
@@ -67,4 +65,8 @@ function validateForm() {
     sessionStorage.inches = document.getElementById("inches");
 
     document.getElementById("append").innerHTML = innerhtml;
+    
+    document.getElementById("result-last").innerHTML = localStorage.lastName;
+    
+    document.getElementById("result-first").innerHTML = localStorage.firstName;
 }
