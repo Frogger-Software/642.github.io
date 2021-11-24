@@ -13,14 +13,16 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
     <script type="text/javascript" async defer>
-        function validateForm() {
+        function validateForm(event) {
+            // event.preventDefault();
             sessionStorage.lastName = document.getElementById("last");
             sessionStorage.firstName = document.getElementById("first");
             sessionStorage.title = document.getElementById("title");
             sessionStorage.feet = document.getElementById("feet");
             sessionStorage.inches = document.getElementById("inches");
 
-            document.getElementById("append").innerHTML = ` <header>
+            document.getElementById("append").innerHTML = `
+             <header>
             <h1>
                 Results verification page Lei
             </h1>
@@ -31,55 +33,55 @@
             <!-- <script>
                 document.getElementById("result-last").innerHTML = ;
             </script> -->
-            <label for="first-name">first name</label>
-            <span id="result-first">localStorage.firstName</span>
-            <!-- <script>
+    <label for="first-name">first name</label>
+    <span id="result-first">localStorage.firstName</span>
+    <!-- <script>
                 document.getElementById("result-first").innerHTML = ;
             </script> -->
-        </div>
-        <div class="dropdown">
-            <label for="title">preferred title</label>
-        </div>
-        <div>
-            <label for="">height</label>
-            '
-            "
-        </div>
-        <div>
-            <label for="phone">phone</label>
-        </div>
-        <div>
-            <label class="form-label" for="Address">Address</label>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="city">City</label>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-outline">
-                    <label class="form-label" for="zip">Zip</label>
-                </div>
+    </div>
+    <div class="dropdown">
+        <label for="title">preferred title</label>
+    </div>
+    <div>
+        <label for="">height</label>
+        '
+        "
+    </div>
+    <div>
+        <label for="phone">phone</label>
+    </div>
+    <div>
+        <label class="form-label" for="Address">Address</label>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-outline">
+                <label class="form-label" for="city">City</label>
             </div>
         </div>
-        <div>
-            <label for="services">services required</label>
-            <br>
-            e-mail<input type="checkbox">
-            phone<input type="checkbox">
-            Facebook<input type="checkbox">
-            Tweeter<input type="checkbox">
-            surface mail<input type="checkbox">
-            personal visit<input type="checkbox">
+        <div class="col">
+            <div class="form-outline">
+                <label class="form-label" for="zip">Zip</label>
+            </div>
         </div>
-        <div class="dropdown">
-            <label for="budget">monthly budget</label>
+    </div>
+    <div>
+        <label for="services">services required</label>
+        <br>
+        e-mail<input type="checkbox">
+        phone<input type="checkbox">
+        Facebook<input type="checkbox">
+        Tweeter<input type="checkbox">
+        surface mail<input type="checkbox">
+        personal visit<input type="checkbox">
+    </div>
+    <div class="dropdown">
+        <label for="budget">monthly budget</label>
 
-        </div>
-        <div class="form-outline">
-            <label class="form-label" for="typeEmail">Email</label>
-        </div>`;
+    </div>
+    <div class="form-outline">
+        <label class="form-label" for="typeEmail">Email</label>
+    </div>`;
         }
     </script>
 </head>
@@ -92,7 +94,7 @@
             Data Survey Form
         </h1>
     </header>
-    <form action="?" id="form" onsubmit="validateForm(); return false">
+    <form id="form" onsubmit="validateForm(); return false">
         <div class="row form-group">
             <div class="col">
                 <label class="form-label" for="last-name">last name</label>
@@ -140,7 +142,7 @@
             <div class="col">
                 <div class="form-outline">
                     <label class="form-label" for="zip">Zip</label>
-                    <input type="number" required class="form-control" id="zip"/>
+                    <input type="number" required class="form-control" id="zip" />
                 </div>
             </div>
         </div>
@@ -172,7 +174,7 @@
     </form>
 
     <div id="append">
-       
+
     </div>
 </body>
 
