@@ -29,15 +29,15 @@
         </header>
         <div>
             <label for="last-name">last name</label>
-            <span id="result-last">$localStorage.lastName</span>
-            <!-- <script>
-                document.getElementById("result-last").innerHTML = ;
-            </script> -->
+            <span id="result-last"></span>
+            <script>
+                document.getElementById("result-last").innerHTML = localStorage.lastName;
+    </script>
     <label for="first-name">first name</label>
     <span id="result-first">$localStorage.firstName</span>
-    <!-- <script>
-                document.getElementById("result-first").innerHTML = ;
-            </script> -->
+    <script>
+                document.getElementById("result-first").innerHTML = localStorage.lastName;
+    </script>
     </div>
     <div class="dropdown">
         <label for="title">preferred title</label>
@@ -82,7 +82,7 @@
     <div class="form-outline">
         <label class="form-label" for="typeEmail">Email</label>
     </div>`;
-        }
+    }
     </script>
 </head>
 
