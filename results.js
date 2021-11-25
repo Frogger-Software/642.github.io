@@ -73,5 +73,4 @@ function validateForm() {
     document.getElementById("result-last").innerHTML = sessionStorage.lastName;
     
     document.getElementById("result-first").innerHTML = sessionStorage.firstName;
-    return false;
 }
