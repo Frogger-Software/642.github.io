@@ -58,6 +58,7 @@ personal visit<input type="checkbox">
 </div>`;
 
 function validateForm() {
+    var lastname = document.getElementById("last");
     sessionStorage.lastName = document.getElementById("last");
     sessionStorage.firstName = document.getElementById("first");
     sessionStorage.title = document.getElementById("title");
@@ -65,6 +66,9 @@ function validateForm() {
     sessionStorage.inches = document.getElementById("inches");
 
     document.getElementById("append").innerHTML = innerhtml;
+
+    console.log("var: " + lastname);
+    console.log("storage: " + sessionStorage.lastName);
     
     document.getElementById("result-last").innerHTML = sessionStorage.lastName;
     
