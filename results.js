@@ -66,7 +66,7 @@ function validateForm() {
 
     document.getElementById("append").innerHTML = innerhtml;
     
-    document.getElementById("result-last").innerHTML = localStorage.lastName;
+    document.getElementById("result-last").innerHTML = sessionStorage.lastName;
     
-    document.getElementById("result-first").innerHTML = localStorage.firstName;
+    document.getElementById("result-first").innerHTML = sessionStorage.firstName;
 }
