@@ -27,17 +27,13 @@ var innerhtml = `<header>
 <span id="result-address"></span>
 </div>
 <div class="row">
-<div class="col">
-    <div class="form-outline">
-        <label class="form-label" for="city"><strong>City</strong> </label>
-        <span id="result-city"></span>
-    </div>
+<div class="form-outline">
+    <label class="form-label" for="city"><strong>City</strong> </label>
+    <span id="result-city"></span>
 </div>
-<div class="col">
-    <div class="form-outline">
-        <label class="form-label" for="zip"><strong>Zip</strong> </label>
-        <span id="result-zip"></span>
-    </div>
+<div class="form-outline">
+    <label class="form-label" for="zip"><strong>Zip</strong> </label>
+    <span id="result-zip"></span>
 </div>
 </div>
 <div>
@@ -97,12 +93,24 @@ function validateForm() {
     document.getElementById("result-address").innerHTML = sessionStorage.address;
     document.getElementById("result-city").innerHTML = sessionStorage.city;
     document.getElementById("result-zip").innerHTML = sessionStorage.zip;
-    document.getElementById("result-box-email").checked = sessionStorage.boxEmail;
-    document.getElementById("result-box-phone").checked = sessionStorage.boxPhone;
-    document.getElementById("result-facebook").checked = sessionStorage.facebook;
-    document.getElementById("result-tweeter").checked = sessionStorage.tweeter;
-    document.getElementById("result-surface-mail").checked = sessionStorage.surfaceMail;
-    document.getElementById("result-personal-visit").checked = sessionStorage.personalVisit;
+    if (sessionStorage.boxEmail = true) {
+        document.getElementById("result-box-email").checked = true;
+    }
+    if (sessionStorage.sessionStorage.boxPhone = true) {
+        document.getElementById("result-box-phone").checked = true;
+    }
+    if (sessionStorage.sessionStorage.facebook = true) {
+        document.getElementById("result-facebook").checked = true;
+    }
+    if (sessionStorage.sessionStorage.tweeter = true) {
+        document.getElementById("result-tweeter").checked = true;
+    }
+    if (sessionStorage.sessionStorage.surfaceMail = true) {
+        document.getElementById("result-surface-mail").checked = true;
+    }
+    if (sessionStorage.sessionStorage.personalVisit = true) {
+        document.getElementById("result-personal-visit").checked = true;
+    }
     document.getElementById("result-budget").innerHTML = sessionStorage.budget;
     document.getElementById("result-email").innerHTML = sessionStorage.email;
 
