@@ -59,20 +59,24 @@ var innerhtml = `<header>
 <label class="form-label" for="typeEmail">Email</label>
 <span id="result-email"></span>
 </div>`;
-// var form = document.getElementById("form");
-// function handleForm(event) { event.preventDefault(); } 
-// form.addEventListener('submit', handleForm);
 
-function validateForm() {
+function validateForm(event) {
+    event.preventDefault();
     sessionStorage.lastName = document.getElementById("last").value;
+    //regex (\D{1,40})
     sessionStorage.firstName = document.getElementById("first").value;
+    //regex (\D{1,40})
     sessionStorage.title = document.getElementById("title").value;
     sessionStorage.feet = document.getElementById("feet").value;
     sessionStorage.inches = document.getElementById("inches").value;
     sessionStorage.phone = document.getElementById("phone").value;
+    //regex \d{10}
     sessionStorage.address = document.getElementById("address").value;
+    //regex .{1,40}
     sessionStorage.city = document.getElementById("city").value;
+    //regex .{1,40}
     sessionStorage.zip = document.getElementById("zip").value;
+    //regex \d{5}
     sessionStorage.boxEmail = document.getElementById("box-email").value;
     sessionStorage.boxPhone = document.getElementById("box-phone").value;
     sessionStorage.facebook = document.getElementById("facebook").value;
