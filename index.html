@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- version 22 -->
+    <!-- version 222 -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSC 642 848 Fall 2021 Individual Assignment Lei Data Survey Form
@@ -27,7 +27,7 @@
             Data Survey Form
         </h1>
     </header>
-    <form id="form" onsubmit="validateForm(); return false">
+    <form id="form">
         <div class="row form-group">
             <div class="col">
                 <label class="form-label" for="last-name">Last Name</label>
@@ -103,7 +103,7 @@
         </div>
         <input type="checkbox" required>I agree to <a href="https://www.google.com">terms</a>
         <!-- <div class="g-recaptcha" data-sitekey="6LdghEYdAAAAAHXlvVOs3FbLonSQh-9cKMfmdNZU"></div> -->
-        <input type="submit">
+        <input type="button" onclick="validateForm()" value="submit">
     </form>
 
     <div id="append">
