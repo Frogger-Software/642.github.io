@@ -76,12 +76,12 @@ function validateForm() {
     //regex .{1,40}
     sessionStorage.zip = document.getElementById("zip").value;
     //regex \d{5}
-    sessionStorage.boxEmail = document.getElementById("box-email").value;
-    sessionStorage.boxPhone = document.getElementById("box-phone").value;
-    sessionStorage.facebook = document.getElementById("facebook").value;
-    sessionStorage.tweeter = document.getElementById("tweeter").value;
-    sessionStorage.surfaceMail = document.getElementById("surface-mail").value;
-    sessionStorage.personalVisit = document.getElementById("personal-visit").value;
+    sessionStorage.boxEmail = document.getElementById("box-email").checked;
+    sessionStorage.boxPhone = document.getElementById("box-phone").checked;
+    sessionStorage.facebook = document.getElementById("facebook").checked;
+    sessionStorage.tweeter = document.getElementById("tweeter").checked;
+    sessionStorage.surfaceMail = document.getElementById("surface-mail").checked;
+    sessionStorage.personalVisit = document.getElementById("personal-visit").checked;
     sessionStorage.budget = document.getElementById("budget").value;
     sessionStorage.email = document.getElementById("email").value;
 
