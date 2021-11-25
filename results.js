@@ -96,12 +96,12 @@ function validateForm() {
     document.getElementById("result-address").innerHTML = sessionStorage.address;
     document.getElementById("result-city").innerHTML = sessionStorage.city;
     document.getElementById("result-zip").innerHTML = sessionStorage.zip;
-    document.getElementById("result-box-email").innerHTML = sessionStorage.boxEmail;
-    document.getElementById("result-box-phone").innerHTML = sessionStorage.boxPhone;
-    document.getElementById("result-facebook").innerHTML = sessionStorage.facebook;
-    document.getElementById("result-tweeter").innerHTML = sessionStorage.tweeter;
-    document.getElementById("result-surface-mail").innerHTML = sessionStorage.surfaceMail;
-    document.getElementById("result-personal-visit").innerHTML = sessionStorage.personalVisit;
+    document.getElementById("result-box-email").checked = sessionStorage.boxEmail;
+    document.getElementById("result-box-phone").checked = sessionStorage.boxPhone;
+    document.getElementById("result-facebook").checked = sessionStorage.facebook;
+    document.getElementById("result-tweeter").checked = sessionStorage.tweeter;
+    document.getElementById("result-surface-mail").checked = sessionStorage.surfaceMail;
+    document.getElementById("result-personal-visit").checked = sessionStorage.personalVisit;
     document.getElementById("result-budget").innerHTML = sessionStorage.budget;
     document.getElementById("result-email").innerHTML = sessionStorage.email;
 
