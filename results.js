@@ -69,8 +69,8 @@ function validateForm() {
 
     console.log("var: " + lastname);
     console.log("storage: " + sessionStorage.lastName);
-    
+
     document.getElementById("result-last").innerHTML = sessionStorage.lastName;
-    
+
     document.getElementById("result-first").innerHTML = sessionStorage.firstName;
 }
