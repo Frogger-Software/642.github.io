@@ -58,12 +58,12 @@ personal visit<input type="checkbox">
 </div>`;
 
 function validateForm() {
-    var lastname = document.getElementById("last");
-    sessionStorage.lastName = document.getElementById("last");
-    sessionStorage.firstName = document.getElementById("first");
-    sessionStorage.title = document.getElementById("title");
-    sessionStorage.feet = document.getElementById("feet");
-    sessionStorage.inches = document.getElementById("inches");
+    var lastname = document.getElementById("last").value;
+    sessionStorage.lastName = document.getElementById("last").value;
+    sessionStorage.firstName = document.getElementById("first").value;
+    sessionStorage.title = document.getElementById("title").value;
+    sessionStorage.feet = document.getElementById("feet").value;
+    sessionStorage.inches = document.getElementById("inches").value;
 
     document.getElementById("append").innerHTML = innerhtml;
 
