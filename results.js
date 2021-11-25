@@ -89,22 +89,22 @@ function validateForm() {
     document.getElementById("result-address").innerHTML = sessionStorage.address;
     document.getElementById("result-city").innerHTML = sessionStorage.city;
     document.getElementById("result-zip").innerHTML = sessionStorage.zip;
-    if (sessionStorage.boxEmail = true) {
+    if (sessionStorage.boxEmail == true) {
         document.getElementById("result-box-email").checked = true;
     }
-    if (sessionStorage.sessionStorage.boxPhone = true) {
+    if (sessionStorage.boxPhone == true) {
         document.getElementById("result-box-phone").checked = true;
     }
-    if (sessionStorage.sessionStorage.facebook = true) {
+    if (sessionStorage.facebook == true) {
         document.getElementById("result-facebook").checked = true;
     }
-    if (sessionStorage.sessionStorage.tweeter = true) {
+    if (sessionStorage.tweeter == true) {
         document.getElementById("result-tweeter").checked = true;
     }
-    if (sessionStorage.sessionStorage.surfaceMail = true) {
+    if (sessionStorage.surfaceMail == true) {
         document.getElementById("result-surface-mail").checked = true;
     }
-    if (sessionStorage.sessionStorage.personalVisit = true) {
+    if (sessionStorage.personalVisit == true) {
         document.getElementById("result-personal-visit").checked = true;
     }
     document.getElementById("result-budget").innerHTML = sessionStorage.budget;
