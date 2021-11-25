@@ -26,15 +26,11 @@ var innerhtml = `<header>
 <label class="form-label" for="address"><strong>Addreses</strong> </label>
 <span id="result-address"></span>
 </div>
-<div class="row">
-<div class="form-outline">
-    <label class="form-label" for="city"><strong>City</strong> </label>
-    <span id="result-city"></span>
-</div>
-<div class="form-outline">
-    <label class="form-label" for="zip"><strong>Zip</strong> </label>
-    <span id="result-zip"></span>
-</div>
+<div>
+<label class="form-label" for="city"><strong>City</strong> </label>
+<span id="result-city"></span>
+<label class="form-label" for="zip"><strong>Zip</strong> </label>
+<span id="result-zip"></span>
 </div>
 <div>
 <label class="form-label" for="services"><strong>Services Required</strong> </label>
