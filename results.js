@@ -4,44 +4,44 @@ var innerhtml = `<header>
 </h1>
 </header>
 <div>
-<label for="last-name">last name</label>
+<label class="form-label" for="last-name"><strong>Last Name</strong> </label>
 <span id="result-last"></span>
-<label for="first-name">first name</label>
+<label class="form-label" for="first-name"><strong>First Name</strong> </label>
 <span id="result-first"></span>
 </div>
 <div class="dropdown">
-<label for="title">preferred title</label>
+<label class="form-label" for="title"><strong>Preferred Title</strong> </label>
 <span id="result-title"></span>
 </div>
 <div>
-<label for="">height</label>
+<label class="form-label" for="height"><strong>Height</strong> </label>
 <span id="result-feet"></span>'
 <span id="result-inches"></span>"
 </div>
 <div>
-<label for="phone">phone</label>
+<label class="form-label" for="phone"><strong>Phone </strong> </label>
 <span id="result-phone"></span>
 </div>
 <div>
-<label class="form-label" for="address">Address</label>
+<label class="form-label" for="address"><strong>Addreses</strong> </label>
 <span id="result-address"></span>
 </div>
 <div class="row">
 <div class="col">
     <div class="form-outline">
-        <label class="form-label" for="city">City</label>
+        <label class="form-label" for="city"><strong>City</strong> </label>
         <span id="result-city"></span>
     </div>
 </div>
 <div class="col">
     <div class="form-outline">
-        <label class="form-label" for="zip">Zip</label>
+        <label class="form-label" for="zip"><strong>Zip</strong> </label>
         <span id="result-zip"></span>
     </div>
 </div>
 </div>
 <div>
-<label for="services">services required</label>
+<label class="form-label" for="services"><strong>Services Required</strong> </label>
 <br>
 <label><input type="checkbox" id="result-box-email" onclick="return false"> e-mail</label>
 <label><input type="checkbox" id="result-box-phone" onclick="return false"> phone</label>
@@ -51,12 +51,12 @@ var innerhtml = `<header>
 <label><input type="checkbox" id="result-personal-visit" onclick="return false"> personal visit</label>
 </div>
 <div class="dropdown">
-<label for="budget">monthly budget</label>
+<label class="form-label" for="budget"><strong>Monthly Budget</strong> </label>
 <span id="result-budget"></span>
 
 </div>
 <div class="form-outline">
-<label class="form-label" for="typeEmail">Email</label>
+<label class="form-label" class="form-label" for="typeEmail"><strong>Email</strong> </label>
 <span id="result-email"></span>
 </div>`;
 
@@ -107,5 +107,4 @@ function validateForm() {
     document.getElementById("result-email").innerHTML = sessionStorage.email;
 
     document.getElementById('append').scrollIntoView();
-    return false;
 }
