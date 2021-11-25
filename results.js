@@ -59,9 +59,9 @@ var innerhtml = `<header>
 <label class="form-label" for="typeEmail">Email</label>
 <span id="result-email"></span>
 </div>`;
-var form = document.getElementById("form");
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
+// var form = document.getElementById("form");
+// function handleForm(event) { event.preventDefault(); } 
+// form.addEventListener('submit', handleForm);
 
 function validateForm() {
     sessionStorage.lastName = document.getElementById("last").value;
