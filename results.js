@@ -84,6 +84,7 @@ function validateForm() {
     sessionStorage.personalVisit = document.getElementById("personal-visit").checked;
     sessionStorage.budget = document.getElementById("budget").value;
     sessionStorage.email = document.getElementById("email").value;
+    console.log("tweeter: " + sessionStorage.tweeter);
 
     document.getElementById("append").innerHTML = innerhtml;
 
