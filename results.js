@@ -60,8 +60,7 @@ var innerhtml = `<header>
 <span id="result-email"></span>
 </div>`;
 
-function validateForm(event) {
-    event.preventDefault();
+function validateForm() {
     sessionStorage.lastName = document.getElementById("last").value;
     //regex (\D{1,40})
     sessionStorage.firstName = document.getElementById("first").value;
