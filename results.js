@@ -105,5 +105,6 @@ function validateForm() {
     document.getElementById("result-budget").innerHTML = sessionStorage.budget;
     document.getElementById("result-email").innerHTML = sessionStorage.email;
 
-    ocument.getElementById('append').scrollIntoView();
+    document.getElementById('append').scrollIntoView();
+    return false;
 }
