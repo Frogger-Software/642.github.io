@@ -54,20 +54,38 @@ var innerhtml = `<header>
 
 function validateForm() {
     sessionStorage.lastName = document.getElementById("last").value;
-    //regex (\D{1,40})
+    if(!(/\D{1,40}/.test(sessionStorage.lastName))){
+        document.getElementById("last-validate").innerHTML = "name must be 1-40 characters";
+        return;
+    }
     sessionStorage.firstName = document.getElementById("first").value;
-    //regex (\D{1,40})
+    if(!(/\D{1,40}/.test(sessionStorage.firstName))){
+        document.getElementById("first-validate").innerHTML = "name must be 1-40 characters";
+        return;
+    }
     sessionStorage.title = document.getElementById("title").value;
     sessionStorage.feet = document.getElementById("feet").value;
     sessionStorage.inches = document.getElementById("inches").value;
     sessionStorage.phone = document.getElementById("phone").value;
-    //regex \d{10}
+    if(!(/\d{10}/.test(sessionStorage.phone))){
+        document.getElementById("phone-validate").innerHTML = "phone must be 10 digits";
+        return;
+    }
     sessionStorage.address = document.getElementById("address").value;
-    //regex .{1,40}
+    if(!(/.{1,40}/.test(sessionStorage.address))){
+        document.getElementById("address-validate").innerHTML = "address must be 1-40 characters";
+        return;
+    }
     sessionStorage.city = document.getElementById("city").value;
-    //regex .{1,40}
+    if(!(/.{1,40}/.test(sessionStorage.city))){
+        document.getElementById("city-validate").innerHTML = "city must be 1-40 characters";
+        return;
+    }
     sessionStorage.zip = document.getElementById("zip").value;
-    //regex \d{5}
+    if(!(/\d{5}/.test(sessionStorage.zip))){
+        document.getElementById("zip-validate").innerHTML = "zip must be 5 digits";
+        return;
+    }
     if (document.getElementById("box-email").checked == true) {
         sessionStorage.boxEmail = true;
     } else {
