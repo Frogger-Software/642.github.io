@@ -70,21 +70,33 @@ function validateForm() {
     //regex \d{5}
     if (document.getElementById("box-email").checked == true) {
         sessionStorage.boxEmail = true;
+    } else {
+        sessionStorage.boxEmail = false;
     }
     if (document.getElementById("box-phone").checked == true) {
         sessionStorage.boxPhone = true;
+    } else {
+        sessionStorage.boxPhone = false;
     }
     if (document.getElementById("facebook").checked == true) {
         sessionStorage.facebook = true;
+    } else {
+        sessionStorage.facebook = false;
     }
     if (document.getElementById("tweeter").checked == true) {
         sessionStorage.tweeter = true;
+    } else {
+        sessionStorage.tweeter = false;
     }
     if (document.getElementById("surface-mail").checked == true) {
         sessionStorage.surfaceMail = true;
+    } else {
+        sessionStorage.surfaceMail = false;
     }
     if (document.getElementById("personal-visit").checked == true) {
         sessionStorage.personalVisit = true;
+    } else {
+        sessionStorage.personalVisit = false;
     }
 
     sessionStorage.budget = document.getElementById("budget").value;
