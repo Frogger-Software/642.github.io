@@ -68,12 +68,25 @@ function validateForm() {
     //regex .{1,40}
     sessionStorage.zip = document.getElementById("zip").value;
     //regex \d{5}
-    sessionStorage.boxEmail = document.getElementById("box-email").checked;
-    sessionStorage.boxPhone = document.getElementById("box-phone").checked;
-    sessionStorage.facebook = document.getElementById("facebook").checked;
-    sessionStorage.tweeter = document.getElementById("tweeter").checked;
-    sessionStorage.surfaceMail = document.getElementById("surface-mail").checked;
-    sessionStorage.personalVisit = document.getElementById("personal-visit").checked;
+    if (document.getElementById("box-email").checked == true) {
+        sessionStorage.boxEmail = true;
+    }
+    if (document.getElementById("box-phone").checked == true) {
+        sessionStorage.boxPhone = true;
+    }
+    if (document.getElementById("facebook").checked == true) {
+        sessionStorage.facebook = true;
+    }
+    if (document.getElementById("tweeter").checked == true) {
+        sessionStorage.tweeter = true;
+    }
+    if (document.getElementById("surface-mail").checked == true) {
+        sessionStorage.surfaceMail = true;
+    }
+    if (document.getElementById("personal-visit").checked == true) {
+        sessionStorage.personalVisit = true;
+    }
+
     sessionStorage.budget = document.getElementById("budget").value;
     sessionStorage.email = document.getElementById("email").value;
     console.log("tweeter: " + sessionStorage.tweeter);
@@ -89,24 +102,12 @@ function validateForm() {
     document.getElementById("result-address").innerHTML = sessionStorage.address;
     document.getElementById("result-city").innerHTML = sessionStorage.city;
     document.getElementById("result-zip").innerHTML = sessionStorage.zip;
-    if (sessionStorage.boxEmail.valueOf() == true) {
-        document.getElementById("result-box-email").checked = true;
-    }
-    if (sessionStorage.boxPhone.valueOf() == true) {
-        document.getElementById("result-box-phone").checked = true;
-    }
-    if (sessionStorage.facebook.valueOf() == true) {
-        document.getElementById("result-facebook").checked = true;
-    }
-    if (sessionStorage.tweeter.valueOf() == true) {
-        document.getElementById("result-tweeter").checked = true;
-    }
-    if (sessionStorage.surfaceMail.valueOf() == true) {
-        document.getElementById("result-surface-mail").checked = true;
-    }
-    if (sessionStorage.personalVisit.valueOf() == true) {
-        document.getElementById("result-personal-visit").checked = true;
-    }
+    document.getElementById("result-box-email").checked = sessionStorage.boxEmail;
+    document.getElementById("result-box-phone").checked = sessionStorage.boxPhone;
+    document.getElementById("result-facebook").checked = sessionStorage.facebook;
+    document.getElementById("result-tweeter").checked = sessionStorage.tweeter;
+    document.getElementById("result-surface-mail").checked = sessionStorage.surfaceMail;
+    document.getElementById("result-personal-visit").checked = sessionStorage.personalVisit;
     document.getElementById("result-budget").innerHTML = sessionStorage.budget;
     document.getElementById("result-email").innerHTML = sessionStorage.email;
 
