@@ -123,6 +123,10 @@ function validateForm() {
     document.getElementById("result-address").innerHTML = sessionStorage.address;
     document.getElementById("result-city").innerHTML = sessionStorage.city;
     document.getElementById("result-zip").innerHTML = sessionStorage.zip;
+    var mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center
+    =` + sessionStorage.city + `,CA&zoom=14&size=400x400&key=AIzaSyAQCltaQTABeWpvdvzuEyB-Rr9nvSHDZm4`;
+    document.getElementById("map").innerHTML = `
+    <img src="` + mapUrl + `" alt="not found">`;
     document.getElementById("result-box-email").checked = sessionStorage.boxEmail;
     document.getElementById("result-box-phone").checked = sessionStorage.boxPhone;
     document.getElementById("result-facebook").checked = sessionStorage.facebook;
