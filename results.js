@@ -54,12 +54,12 @@ var innerhtml = `<header>
 
 function validateForm() {
     sessionStorage.lastName = document.getElementById("last").value;
-    if(!(/\D{1,40}/.test(sessionStorage.lastName))){
+    if(!(/^\D{1,40}$/.test(sessionStorage.lastName))){
         document.getElementById("last-validate").innerHTML = "name must be 1-40 characters";
         return;
     }
     sessionStorage.firstName = document.getElementById("first").value;
-    if(!(/\D{1,40}/.test(sessionStorage.firstName))){
+    if(!(/^\D{1,40}$/.test(sessionStorage.firstName))){
         document.getElementById("first-validate").innerHTML = "name must be 1-40 characters";
         return;
     }
@@ -67,59 +67,46 @@ function validateForm() {
     sessionStorage.feet = document.getElementById("feet").value;
     sessionStorage.inches = document.getElementById("inches").value;
     sessionStorage.phone = document.getElementById("phone").value;
-    if(!(/\d{10}/.test(sessionStorage.phone))){
+    if(!(/^\d{10}$/.test(sessionStorage.phone))){
         document.getElementById("phone-validate").innerHTML = "phone must be 10 digits";
         return;
     }
     sessionStorage.address = document.getElementById("address").value;
-    if(!(/.{1,40}/.test(sessionStorage.address))){
+    if(!(/^.{1,40}$/.test(sessionStorage.address))){
         document.getElementById("address-validate").innerHTML = "address must be 1-40 characters";
         return;
     }
     sessionStorage.city = document.getElementById("city").value;
-    if(!(/.{1,40}/.test(sessionStorage.city))){
+    if(!(/^.{1,40}$/.test(sessionStorage.city))){
         document.getElementById("city-validate").innerHTML = "city must be 1-40 characters";
         return;
     }
     sessionStorage.zip = document.getElementById("zip").value;
-    if(!(/\d{5}/.test(sessionStorage.zip))){
+    if(!(/^\d{5}$/.test(sessionStorage.zip))){
         document.getElementById("zip-validate").innerHTML = "zip must be 5 digits";
         return;
     }
     if (document.getElementById("box-email").checked == true) {
         sessionStorage.boxEmail = true;
-    } else {
-        sessionStorage.boxEmail = false;
-    }
+    } 
     if (document.getElementById("box-phone").checked == true) {
         sessionStorage.boxPhone = true;
-    } else {
-        sessionStorage.boxPhone = false;
-    }
+    } 
     if (document.getElementById("facebook").checked == true) {
         sessionStorage.facebook = true;
-    } else {
-        sessionStorage.facebook = false;
-    }
+    } 
     if (document.getElementById("tweeter").checked == true) {
         sessionStorage.tweeter = true;
-    } else {
-        sessionStorage.tweeter = false;
-    }
+    } 
     if (document.getElementById("surface-mail").checked == true) {
         sessionStorage.surfaceMail = true;
-    } else {
-        sessionStorage.surfaceMail = false;
-    }
+    } 
     if (document.getElementById("personal-visit").checked == true) {
         sessionStorage.personalVisit = true;
-    } else {
-        sessionStorage.personalVisit = false;
-    }
+    } 
 
     sessionStorage.budget = document.getElementById("budget").value;
     sessionStorage.email = document.getElementById("email").value;
-    console.log("tweeter: " + sessionStorage.tweeter);
 
     document.getElementById("append").innerHTML = innerhtml;
 
