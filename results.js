@@ -32,6 +32,8 @@ var innerhtml = `<header>
 <label class="form-label" for="zip"><strong>Zip</strong> </label>
 <span id="result-zip"></span>
 </div>
+<div id="map">
+</div>
 <div>
 <label class="form-label" for="services"><strong>Services Required</strong> </label>
 <br>
@@ -53,15 +55,16 @@ var innerhtml = `<header>
 </div>`;
 
 function validateForm() {
+    var noResults = false;
     sessionStorage.lastName = document.getElementById("last").value;
     if (!(/^\D{1,40}$/.test(sessionStorage.lastName))) {
         document.getElementById("last-validate").innerHTML = "name must be 1-40 characters";
-        return;
+        noResults = true;
     }
     sessionStorage.firstName = document.getElementById("first").value;
     if (!(/^\D{1,40}$/.test(sessionStorage.firstName))) {
         document.getElementById("first-validate").innerHTML = "name must be 1-40 characters";
-        return;
+        noResults = true;
     }
     sessionStorage.title = document.getElementById("title").value;
     sessionStorage.feet = document.getElementById("feet").value;
@@ -69,22 +72,22 @@ function validateForm() {
     sessionStorage.phone = document.getElementById("phone").value;
     if (!(/^\d{10}$/.test(sessionStorage.phone))) {
         document.getElementById("phone-validate").innerHTML = "phone must be 10 digits";
-        return;
+        noResults = true;
     }
     sessionStorage.address = document.getElementById("address").value;
     if (!(/^.{1,40}$/.test(sessionStorage.address))) {
         document.getElementById("address-validate").innerHTML = "address must be 1-40 characters";
-        return;
+        noResults = true;
     }
     sessionStorage.city = document.getElementById("city").value;
     if (!(/^.{1,40}$/.test(sessionStorage.city))) {
         document.getElementById("city-validate").innerHTML = "city must be 1-40 characters";
-        return;
+        noResults = true;
     }
     sessionStorage.zip = document.getElementById("zip").value;
     if (!(/^\d{5}$/.test(sessionStorage.zip))) {
         document.getElementById("zip-validate").innerHTML = "zip must be 5 digits";
-        return;
+        noResults = true;
     }
     if (document.getElementById("box-email").checked == true) {
         sessionStorage.boxEmail = true;
@@ -107,6 +110,9 @@ function validateForm() {
 
     sessionStorage.budget = document.getElementById("budget").value;
     sessionStorage.email = document.getElementById("email").value;
+    if(noResults == true){
+        return;
+    }
 
     document.getElementById("append").innerHTML = innerhtml;
 
